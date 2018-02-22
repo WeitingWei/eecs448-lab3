@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Slide Show!</title>
+</head>
+<body>
+
+<h1>Slide Show!</h1>
+  <div class="Slide Show!">
+    <div class="numbertext">1 / 5</div>
+    <img src="imag1.jpg" style="width:100%">
+  </div>
+   <div class="Slide Show!">
+    <div class="numbertext">2 / 5</div>
+    <img src="imag2.jpg" style="width:100%">
+  </div>
+   <div class="Slide Show!">
+    <div class="numbertext">3 / 5</div>
+    <img src="imag3.jpg" style="width:100%">
+  </div>
+   <div class="Slide Show!">
+    <div class="numbertext">4 / 5</div>
+    <img src="imag4.jpg" style="width:100%">
+  </div>
+   <div class="Slide Show!">
+    <div class="numbertext">5 / 5</div>
+    <img src="imag5.jpg" style="width:100%">
+  </div>
+  <main>
+            <div class="slide">
+                <img id="slide-image" src="imag1.jpg" width="512px" height="512px" />
+                <input type="button" value="previous" onclick="slide('left')" />
+                <input type="button" value="next" onclick="slide('right')" />
+            </div>
+
+
+  
+
+<script src="eecs448-lab3/exercise.js"></script>
+</body>
+</html>
+
+
+<script type="text/javascript">
+
+<script>
+            var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none"; 
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1} 
+    slides[slideIndex-1].style.display = "block"; 
+    setTimeout(showSlides, 5000); 
+                }
+                document.getElementById("slide-imag").src = "img" + slideCurrent + ".jpg";
+            }
+        </script>
+    </body>
+</html>
+
